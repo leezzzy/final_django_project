@@ -1,7 +1,6 @@
 body {
     font-family: "Lucida Grande", Verdana, Arial, sans-serif;
     font-size: 14px;
-
 }
 
 /* PAGE STRUCTURE */
@@ -9,56 +8,39 @@ div#header {
     position: absolute;
     top: 0px;
     left: 0px;
-    height: 100px;
+    height: 30px;
     width: 100%;
     display: table;
-    background-image: url("https://upload.wikimedia.org/wikipedia/commons/6/69/NASA-HS201427a-HubbleUltraDeepField2014-20140603.jpg");
+    background: lightcoral;
 }
 
 div#menu {
     position: absolute;
-    top: 100px;
+    top: 30px;
     left: 0px;
     height: 20px;
-    padding:10px;
     width: 100%;
     display: table;
     table-layout: fixed;
     border-spacing: 40px 0px;
-    background: black;
-    font-size: 13px;
-    border-bottom: solid 2px #5d5d5d;
+    background: lightpink;
+    font-size: 8px;
 }
 
 div#content {
     position: absolute;
-    top: 220px;
+    top: 70px;
     left: 50px;
-    right: 50px
-}
-
-div#content h1{
-    /*color: #cfceda;*/
-    color: #4648bf;
-}
-
-div#content p{
-    color: #cfceda;
-}
-
-div#content h4{
-    color: #cfceda;
+    right: 50px;
 }
 
 div#footer {
-    padding:5px;
     position: absolute;
     bottom: 20px;
     left: 50px;
     right: 50px;
     height: 30px;
-    /*border-top:1px solid #5926cc;*/
-    color: #9baec8;
+    border-top:1px solid #ccc;
 }
 
 /* HEADER */
@@ -66,11 +48,9 @@ div#footer {
     display: table-cell;
     vertical-align: middle;
     padding-left: 20px;
-    color: #ffc;
-
+    color: white;
     font-weight: bold;
     font-size: 16px;
-
 }
 
 .welcome {
@@ -78,8 +58,8 @@ div#footer {
     vertical-align: middle;
     text-align: right;
     padding-right: 20px;
-    color: #9baec8;
-    font-weight: bold;
+    color: #ffc;
+    font-weight: normal;
     font-size: 12px;
 }
 
@@ -89,28 +69,16 @@ div#footer {
 
 /* MENU */
 div#menu a:link, div#menu a:visited {
-    color: #ffffff;
+    color: #36c;
 }
 
 div#menu > li {
     display: table-cell;
     vertical-align: middle;
-    /*border: 2px solid #ffffff;*/
+    border: 2px solid #bbb;
     border-radius: 25px;
     text-align: center;
     font-weight: bold;
-}
-
-div#menu li{ /* 드롭다운 메뉴가 바뀌었넼ㅋㅋㅋㅋ*/
-    /*display: table-cell;*/
-    vertical-align: middle;
-    /*border-radius: 25px;*/
-    text-align: center;
-    font-weight: bold;
-}
-
-li{ /*이것도 내가 추가*/
-    color: #4f44b1;
 }
 
 /* pulldown menu */
@@ -120,56 +88,20 @@ div#menu li  ul {
     margin: 0;
     padding:10px 10px 5px 10px;
     list-style:none;
-    /*border-right: 1px solid #8ea0f9;*/
-    /*border-left: 1px solid #8ea0f9;*/
+    border-right: 1px solid #ccc;
+    border-left: 1px solid #ccc;
     border-bottom: 1px solid #ccc;
-    background: #9baec8;
+    background: white;
     z-index: 1;
 }
 
 div#menu li:hover ul {
     display:block;
-    width:170px;
-}
-
-div#menu li ul li{
-    color:white;
-}
-
-
-div#menu li ul li ul{
-    visibility: hidden;
-    opacity:0;
-    color:white;
-}
-
-div#menu li ul li:hover > ul{
-    visibility:visible;
-    opacity:1;
-    position:absolute;
-    /*left:168px;*/
-    left:159px;
-    top:57px;
-}
-
-div#menu li ul li ul li:hover{
-    background:lightcyan;
-}
-
-div#menu li ul li{
-    padding:5px;
-}
-
-div#menu li ul li ul{
-    display: table-cell;
-    vertical-align: middle;
-    text-align: center;
-    font-weight: bold;
 }
 
 /* LINK */
 a:link, a:visited {
-    color: #a7aad6;
+    color: #369;
     text-decoration: none;
 }
 
@@ -180,30 +112,17 @@ a:hover {
 /* TABLE */
 table {
     border-collapse: collapse;
-    width:700px;
-    margin: 20px 0px;
 }
 
 td, th {
     line-height: 18px;
-    border-bottom: 1px solid #5e76ee;
+    border-bottom: 1px solid #eee;
     vertical-align: top;
     padding: 5px 15px;
     font-family: "Lucida Grande", Verdana, Arial, sans-serif;
 }
 
-
 table.change-list, table.change-list th, table.change-list td {
-    border: 1px solid #8686f1;
+    border: 1px solid #ccc;
 }
 
-table.change-list th{
-    text-align:center;
-    color: #afc3ff;
-    font-size: 16px;
-}
-
-table.change-list td, table.change-list td a{
-    text-align:center;
-    color: #989ac5;
-}

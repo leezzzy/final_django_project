@@ -5,11 +5,11 @@
 {% block content %}
 <div id="content">
 
-    <h1>북마크 삭제하기</h1>
+    <h1>Bookmark Delete</h1>
 
     <form action="" method="post">{% csrf_token %}
-        <p>"{{ object }}"라는 제목을 가진 북마크를 정말 삭제하시겠습니까?</p>
-        <input type="submit" value="확인"/>
+        <p>Are you sure you want to delete "{{ object }}" ?</p>
+        <input type="submit" value="Confirm" />
     </form>
 
 </div>

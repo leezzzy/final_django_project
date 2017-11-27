@@ -5,7 +5,7 @@
 {% block content %}
 <div id="content">
 
-<h1>{{ year|date:"Y" }}년도의 내 게시글 보관함</h1>
+<h1>Post Archives for {{ year|date:"Y" }}</h1>
 
 <ul>
     {% for date in date_list %}

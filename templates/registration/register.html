@@ -8,15 +8,15 @@
 {% block content %}
 <div id="content">
 
-    <h1>회원가입</h1>
+    <h1>New User Registration</h1>
 
     <form method="post" action="."> {% csrf_token %}
 
     {% if form.errors %}
-    <p class="errornote">틀렸습니다! 정확한 정보를 입력해주세요.</p>
+    <p class="errornote">Wrong! Please correct the error(s) below.</p>
     {% endif %}
     
-    <p>사용할 사용자 이름과 비밀번호를 입력해주세요.</p>
+    <p>Please enter your username etc.</p>
     
     <fieldset class="aligned">
     
@@ -35,7 +35,7 @@
     </fieldset>
     
     <div class="submit-row">
-        <input type="submit" value="확인"/>
+        <input type="submit" value="Register"/>
     </div>
     
     <script type="text/javascript">document.getElementById("id_username").focus();</script>

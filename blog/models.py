@@ -11,13 +11,13 @@ from django.utils.text import slugify
 
 @python_2_unicode_compatible
 class Post(models.Model):
-    title = models.CharField('제목', max_length=50)
-    slug = models.SlugField('슬러그', unique=True, allow_unicode=True, help_text='one word for title alias.')
-    description = models.CharField('요약', max_length=100, blank=True, help_text='simple description text.')
-    content = models.TextField('내용')
-    create_date = models.DateTimeField('생성 날짜', auto_now_add=True)
-    modify_date = models.DateTimeField('수정 날짜', auto_now=True)
-    tag = TagField('태그')
+    title = models.CharField('TITLE', max_length=50)
+    slug = models.SlugField('SLUG', unique=True, allow_unicode=True, help_text='one word for title alias.')
+    description = models.CharField('DESCRIPTION', max_length=100, blank=True, help_text='simple description text.')
+    content = models.TextField('CONTENT')
+    create_date = models.DateTimeField('Create Date', auto_now_add=True)
+    modify_date = models.DateTimeField('Modify Date', auto_now=True)
+    tag = TagField()
     owner = models.ForeignKey(User, null=True)
 
     class Meta:

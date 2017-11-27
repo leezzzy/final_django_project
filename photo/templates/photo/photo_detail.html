@@ -20,12 +20,12 @@
     
     <td>
     <ul>
-        <li>사진 내용</li>
+        <li>Photo Description</li>
         {% if object.description %}<p>{{ object.description|linebreaks }}</p>
         {% else %}<p>(blank)</p>{% endif %}
-        <li>업로드 날짜</li>
+        <li>Date Uploaded</li>
         <p>{{ object.upload_date }}</p>
-        <li>앨범 이름</li>
+        <li>Album Name</li>
         <p><a href="{% url 'photo:album_detail' object.album.id %}">{{ object.album.name }}</a></p>
     </ul>
     </td>
