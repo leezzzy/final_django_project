@@ -1,6 +1,7 @@
 body {
     font-family: "Lucida Grande", Verdana, Arial, sans-serif;
     font-size: 14px;
+
 }
 
 /* PAGE STRUCTURE */
@@ -8,39 +9,56 @@ div#header {
     position: absolute;
     top: 0px;
     left: 0px;
-    height: 30px;
+    height: 100px;
     width: 100%;
     display: table;
-    background: lightcoral;
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/6/69/NASA-HS201427a-HubbleUltraDeepField2014-20140603.jpg");
 }
 
 div#menu {
     position: absolute;
-    top: 30px;
+    top: 100px;
     left: 0px;
     height: 20px;
+    padding:10px;
     width: 100%;
     display: table;
     table-layout: fixed;
     border-spacing: 40px 0px;
-    background: lightpink;
-    font-size: 8px;
+    background: black;
+    font-size: 13px;
+    border-bottom: solid 2px #5d5d5d;
 }
 
 div#content {
     position: absolute;
-    top: 70px;
+    top: 220px;
     left: 50px;
-    right: 50px;
+    right: 50px
+}
+
+div#content h1{
+    /*color: #cfceda;*/
+    color: #4648bf;
+}
+
+div#content p{
+    color: #cfceda;
+}
+
+div#content h4{
+    color: #cfceda;
 }
 
 div#footer {
+    padding:5px;
     position: absolute;
     bottom: 20px;
     left: 50px;
     right: 50px;
     height: 30px;
-    border-top:1px solid #ccc;
+    /*border-top:1px solid #5926cc;*/
+    color: #9baec8;
 }
 
 /* HEADER */
@@ -48,9 +66,11 @@ div#footer {
     display: table-cell;
     vertical-align: middle;
     padding-left: 20px;
-    color: white;
+    color: #ffc;
+
     font-weight: bold;
     font-size: 16px;
+
 }
 
 .welcome {
@@ -58,8 +78,8 @@ div#footer {
     vertical-align: middle;
     text-align: right;
     padding-right: 20px;
-    color: #ffc;
-    font-weight: normal;
+    color: #9baec8;
+    font-weight: bold;
     font-size: 12px;
 }
 
@@ -69,16 +89,28 @@ div#footer {
 
 /* MENU */
 div#menu a:link, div#menu a:visited {
-    color: #36c;
+    color: #ffffff;
 }
 
 div#menu > li {
     display: table-cell;
     vertical-align: middle;
-    border: 2px solid #bbb;
+    /*border: 2px solid #ffffff;*/
     border-radius: 25px;
     text-align: center;
     font-weight: bold;
+}
+
+div#menu li{ /* 드롭다운 메뉴가 바뀌었넼ㅋㅋㅋㅋ*/
+    /*display: table-cell;*/
+    vertical-align: middle;
+    /*border-radius: 25px;*/
+    text-align: center;
+    font-weight: bold;
+}
+
+li{ /*이것도 내가 추가*/
+    color: #4f44b1;
 }
 
 /* pulldown menu */
@@ -86,22 +118,61 @@ div#menu li  ul {
     display:none;
     position:absolute;
     margin: 0;
-    padding:10px 10px 5px 10px;
+    /*padding:10px 10px 5px 10px;*/
+    padding:0px 0px;
     list-style:none;
-    border-right: 1px solid #ccc;
-    border-left: 1px solid #ccc;
+    /*border-right: 1px solid #8ea0f9;*/
+    /*border-left: 1px solid #8ea0f9;*/
     border-bottom: 1px solid #ccc;
-    background: white;
+    background: #9baec8;
     z-index: 1;
 }
 
 div#menu li:hover ul {
     display:block;
+    width:170px;
+    /*position:absolute;*/
+    /*top:40px;*/
+}
+
+div#menu li ul li{
+    color:white;
+}
+
+
+div#menu li ul li ul{
+    visibility: hidden;
+    opacity:0;
+    color:white;
+}
+
+div#menu li ul li:hover > ul{
+    visibility:visible;
+    opacity:1;
+    position:absolute;
+    /*left:168px;*/
+    left:170px;
+    top:57px;
+}
+
+div#menu li ul li ul li:hover{
+    background: #708095;
+}
+
+div#menu li ul li{
+    padding:5px;
+}
+
+div#menu li ul li ul{
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    font-weight: bold;
 }
 
 /* LINK */
 a:link, a:visited {
-    color: #369;
+    color: #a7aad6;
     text-decoration: none;
 }
 
@@ -112,17 +183,30 @@ a:hover {
 /* TABLE */
 table {
     border-collapse: collapse;
+    width:700px;
+    margin: 20px 0px;
 }
 
 td, th {
     line-height: 18px;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid #5e76ee;
     vertical-align: top;
     padding: 5px 15px;
     font-family: "Lucida Grande", Verdana, Arial, sans-serif;
 }
 
+
 table.change-list, table.change-list th, table.change-list td {
-    border: 1px solid #ccc;
+    border: 1px solid #8686f1;
 }
 
+table.change-list th{
+    text-align:center;
+    color: #afc3ff;
+    font-size: 16px;
+}
+
+table.change-list td, table.change-list td a{
+    text-align:center;
+    color: #989ac5;
+}

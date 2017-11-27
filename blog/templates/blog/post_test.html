@@ -1,12 +1,12 @@
 {% extends "base.html" %}
 
-{% block title %}post_all.html{% endblock %}
+{% block title %}7조의 장고 홈페이지입니다.{% endblock %}
 
 {% block content %}
 <div id="content">
 
 {# <h1>Blog List - test</h1> #}
-<h1>Blog List - contains the word '{{ SearchWord }}'</h1>
+<h1>'{{ SearchWord }}'라는 단어를 포함한 블로그 목록</h1>
 
 {% for post in posts %}
     <h2><a href='{{ post.get_absolute_url }}'>{{ post.title }}</a></h2>
@@ -19,13 +19,13 @@
 <div>
     <span>
         {% if page_obj.has_previous %}
-            <a href="?page={{ page_obj.previous_page_number }}">PreviousPage</a>
+            <a href="?page={{ page_obj.previous_page_number }}">이전페이지</a>
         {% endif %}
       
         Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}
       
         {% if page_obj.has_next %}
-            <a href="?page={{ page_obj.next_page_number }}">NextPage</a>
+            <a href="?page={{ page_obj.next_page_number }}">다음페이지</a>
         {% endif %}
     </span>
 

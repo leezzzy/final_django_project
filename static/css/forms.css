@@ -3,10 +3,10 @@
 .errornote {
     display: block;
     margin: 5px 0;
-    border: 1px solid #c30;
-    background: #fcf;
+    border: 1px solid #2f214f;
+    background: #a4a4ff;
     padding: 5px 25px;
-    color: #c30;
+    color: #2f214f;
     font-size: 12px;
     font-weight: bold;
 }
@@ -31,11 +31,12 @@ fieldset {
 
 .submit-row {
     margin: 5px 0;
-    border: 1px solid #ccc;
+    /*border: 1px solid #ccc;*/
     text-align: right;
 }
 
 .submit-row input {
     margin: 10px;
-    background: #ffc;
+    background: #5663b9;
+    color:#fff;
 }

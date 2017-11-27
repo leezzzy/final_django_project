@@ -7,55 +7,72 @@
 {% load staticfiles %}
 <link rel="stylesheet" type="text/css" href="{% block stylesheet %}{% static "css/base.css" %}{% endblock %}" />
 <link rel="stylesheet" type="text/css" href="{% block extrastyle %}{% endblock %}" />
+<link href="{% static "css/bootstrap.min.css" %}" rel="stylesheet">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
 </head>
+
+<style>
+    body{
+        background:black;
+    }
+    .form-row{
+        color:#CFCEDA;
+    }
+{#    @import url(//fonts.googleapis.com/earlyaccess/nanumpenscript.css);#}
+{#      h1 { font-family: 'Nanum Pen Script', cursive; }#}
+
+</style>
 
 <body>
 
 <div id="header">
-    <h2 class="maintitle">Easy&amp;Fast Django Web Programming</h2>
+    <h2 class="maintitle"><a href="{% url 'home' %}">&nbsp;<span class="glyphicon glyphicon-home"></span></a></h2>
+{#<h2 class="maintitle"><a href="{% url 'home' %}">쉽고 빠르게 장고로 만든 웹 사이트</a></h2>#}
     {% if user.is_active %}
-    <h4 class="welcome">Welcome,
-                <strong>{% firstof user.get_short_name user.get_username %}</strong> /
-                <a href="{% url 'password_change' %}">Change Password</a> /
-                <a href="{% url 'logout' %}">Logout</a>
+    <h4 class="welcome">환영합니다,
+                <strong>{% firstof user.get_short_name user.get_username %}님</strong> /
+                <a href="{% url 'password_change' %}">비밀번호 변경</a> /
+                <a href="{% url 'logout' %}">로그아웃</a>
     </h4>
     {% else %}
-    <h4 class="welcome">Welcome, Anonymous /
-                <a href="{% url 'login' %}">Login</a> /
-                <a href="{% url 'register' %}">Register</a>
+    <h4 class="welcome">환영합니다, 익명의 사용자님 /
+                <a href="{% url 'login' %}">로그인</a> /
+                <a href="{% url 'register' %}">회원가입</a>
     </h4>
     {% endif %}
 </div>
 
 <div id="menu">
-    <li><a href="{% url 'home' %}">Home</a></li>
-    <li><a href="{% url 'bookmark:index' %}">Bookmark</a></li>
-    <li><a href="{% url 'blog:index' %}">Blog</a></li>
-    <li><a href="{% url 'photo:index' %}">Photo</a></li>
-
-    <li>Add&bigtriangledown;
+    <li><a href="{% url 'bookmark:index' %}">북마크 ▽</a>
         <ul>
-            <li><a href="{% url 'bookmark:add' %}">Bookmark</a></li>
-            <li><a href="{% url 'blog:add' %}">Post</a></li>
-            <li><a href="{% url 'photo:album_add' %}">Album</a></li>
-            <li><a href="{% url 'photo:photo_add' %}">Photo</a></li>
+            <li><a href="{% url 'bookmark:add' %}">북마크 추가</a></li>
+            <li><a href="{% url 'bookmark:change' %}">북마크 업데이트/삭제</a></li>
         </ul>
     </li>
-    <li>Change&bigtriangledown;
+    <li><a href="{% url 'blog:index' %}">블로그 ▽</a>
         <ul>
-            <li><a href="{% url 'bookmark:change' %}">Bookmark</a></li>
-            <li><a href="{% url 'blog:change' %}">Post</a></li>
-            <li><a href="{% url 'photo:album_change' %}">Album</a></li>
-            <li><a href="{% url 'photo:photo_change' %}">Photo</a></li>
+            <li><a href="{% url 'blog:add' %}">게시글 추가</a></li>
+            <li><a href="{% url 'blog:change' %}">게시글 업데이트/삭제</a></li>
         </ul>
     </li>
+    <li><a href="{% url 'photo:index' %}">앨범 ▽</a>
+        <ul>
+            <li><a href="{% url 'photo:album_add' %}">앨범 추가</a></li>
+            <li><a href="{% url 'photo:album_change' %}">앨범 업데이트/삭제</a></li>
+            <li>사진 ▷
+                <ul>
+                    <li><a href="{% url 'photo:photo_add' %}">사진 추가</a></li>
+                    <li><a href="{% url 'photo:photo_change' %}">사진 업데이트/삭제</a></li>
+                </ul>
+            </li>
+        </ul>
 
-    <li><a href="{% url 'blog:post_archive' %}">Archive</a></li>
-    <li><a href="{% url 'blog:search' %}">Search</a></li>
-    <li><a href="{% url 'admin:index' %}">Admin</a></li>
+    </li>
+    <li><a href="{% url 'blog:post_archive' %}">게시글 보관함</a></li>
+    <li><a href="{% url 'blog:search' %}">검색하기</a></li>
+    <li><a href="{% url 'admin:index' %}">사용자</a></li>
 </div>
-
 {% block content %}{% endblock %}
 
 {% block footer %}{% endblock %}
