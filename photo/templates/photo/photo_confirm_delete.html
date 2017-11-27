@@ -5,11 +5,11 @@
 {% block content %}
 <div id="content">
 
-    <h1>Photo Delete</h1>
+    <h1>사진 삭제하기</h1>
 
     <form action="" method="post">{% csrf_token %}
-        <p>Are you sure you want to delete "{{ object }}" ?</p>
-        <input type="submit" value="Confirm" />
+        <p> "{{ object }}"라는 이름을 가진 사진을 정말 삭제하시겠습니까?</p>
+        <input type="submit" value="확인" />
     </form>
 
 </div>

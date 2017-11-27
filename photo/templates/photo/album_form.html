@@ -8,7 +8,7 @@
 {% block content %}
 <div id="content">
 
-    <h1>Album-Photo InlineFormSet</h1>
+    <h1>앨범 업데이트/생성하기(사용자: {{user}})</h1>
 
     {% if form.is_multipart or formset.is_multipart %}
     <form enctype="multipart/form-data" method="post" action=".">
@@ -18,14 +18,14 @@
     {% csrf_token %}
 
     {% if form.errors %}
-    <p class="errornote">Wrong! Please correct the FORM error(s) below.</p>
+    <p class="errornote">틀렸습니다! 정확한 정보를 입력하세요.</p>
     {% endif %}
     {% if formset.errors %}
-    <p class="errornote">Wrong! Please correct the FORMSET error(s) below.</p>
+    <p class="errornote">틀렸습니다! 정확한 정보를 입력하세요.</p>
     {% endif %}
 
 
-    <h4>Create or Update Album contents.</h4>
+    <h4>앨범의 제목과 내용을 입력하세요.</h4>
 
     <fieldset class="aligned">
         <div class="form-row">
@@ -36,7 +36,7 @@
         </div>
     </fieldset>
 
-    <h4>Create or Update Photo contents.</h4>
+    <h4>앨범에 들어갈 이미지를 추가하고, 제목과 내용을 입력하세요.</h4>
 
     {{ formset.management_form }}
     {% for form in formset %}
@@ -55,7 +55,7 @@
     {% endfor %}
 
     <div class="submit-row">
-        <input type="submit" value="Submit"/>
+        <input type="submit" value="확인"/>
     </div>
 
     <script type="text/javascript">document.getElementById('id_name').focus();</script>

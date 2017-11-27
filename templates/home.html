@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 
-{% block title %}home.html{% endblock %}
+{% block title %}7조의 장고 홈페이지입니다.{% endblock %}
 
 {% load staticfiles %}
 {% block extrastyle %}{% static "css/home.css" %}{% endblock %}
@@ -10,41 +10,44 @@
 <div id="content_home">
 
     <div id="homeimg">
-        <a href="/"><img src="{% static 'img/django-actor-big.jpg' %}" style="height:256px;"/></a>
-        <h4 style="margin: 0;">This is Django powered web site.</h4>
+        <a href="/"><img src="https://www.popsci.com/sites/popsci.com/files/images/2016/12/giphy_38.gif" style="height:260px;"/></a>
+{#        <div id="hometxt">#}
+{#            <h4 style="margin: 0;">웹 사이트에 오신 것을 환영합니다.</h4>#}
+{#        </div>#}
+
     </div>
 
-    <hr style="margin: 5px 0;">
+{#    <hr style="margin: 5px 0;">#}
 
-    <h2>Select Application</h2>
-
-    <table id="applist">
-        <tr>
-        <td><b><i><a href="{% url 'bookmark:index' %}">Bookmark</a></i><b></td>
-        <td>You can store your own bookmarks by Bookmark application. It's also possible to update or delete your bookmarks.</td>
-        <td class="Edit"><i><a href="{% url 'bookmark:add' %}">Add</a></i></td>
-        <td class="Edit"><i><a href="{% url 'bookmark:change' %}">Change</a></i></td>
-        </tr>
-
-        <tr>
-        <td><b><i><a href="{% url 'blog:index' %}">Blog</a></i><b></td>
-        <td>This application makes it possible to log daily events or write your own interests such as hobbies, techniques, etc.</td>
-        <td class="Edit"><i><a href="{% url 'blog:add' %}">Add</a></i></td>
-        <td class="Edit"><i><a href="{% url 'blog:change' %}">Change</a></i></td>
-        </tr>
-
-        <tr>
-        <td><b><i><a href="{% url 'photo:index' %}">Photo</a></i><b></td>
-        <td>You can upload your own photos through this application. If you delete an album, all photos within it will be deleted.</td>
-        <td class="Edit"><i><a href="{% url 'photo:album_add' %}">Add</a></i></td>
-        <td class="Edit"><i><a href="{% url 'photo:album_change' %}">Change</a></i></td>
-        </tr>
-    </table>
+{#    <h2>원하는 프로그램 선택하기</h2>#}
+{##}
+{#    <table id="applist">#}
+{#        <tr>#}
+{#        <td><b><i><a href="{% url 'bookmark:index' %}">북마크</a></i><b></td>#}
+{#        <td>나만의 북마크를 저장/업데이트하거나, 삭제하기.</td>#}
+{#        <td class="Edit"><i><a href="{% url 'bookmark:add' %}">추가</a></i></td>#}
+{#        <td class="Edit"><i><a href="{% url 'bookmark:change' %}">변경</a></i></td>#}
+{#        </tr>#}
+{##}
+{#        <tr>#}
+{#        <td><b><i><a href="{% url 'blog:index' %}">내 블로그</a></i><b></td>#}
+{#        <td>이벤트를 기록하거나 취미, 기술 등 내 블로그에 기록하기</td>#}
+{#        <td class="Edit"><i><a href="{% url 'blog:add' %}">추가</a></i></td>#}
+{#        <td class="Edit"><i><a href="{% url 'blog:change' %}">변경</a></i></td>#}
+{#        </tr>#}
+{##}
+{#        <tr>#}
+{#        <td><b><i><a href="{% url 'photo:index' %}">사진</a></i><b></td>#}
+{#        <td>내 사진을 업로드하기(앨범을 삭제하면 앨범 내의 모든 사진이 삭제됩니다.)</td>#}
+{#        <td class="Edit"><i><a href="{% url 'photo:album_add' %}">추가</a></i></td>#}
+{#        <td class="Edit"><i><a href="{% url 'photo:album_change' %}">변경</a></i></td>#}
+{#        </tr>#}
+{#    </table>#}
 </div>
 {% endblock content %}
 
 {% block footer %}
 <div id="footer">
-    &copy; shkim 2016
+    &copy; 7조 2017
 </div>
 {% endblock footer %}
