@@ -9,6 +9,11 @@ div#content_home {
 div#homeimg {
     background: #000;
     text-align: center;
+    color: #b8b8a2;
+}
+
+div#homeimg{
+    font-size:30px;
 }
 
 /*div#hometxt{*/

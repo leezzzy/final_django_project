@@ -31,11 +31,12 @@ fieldset {
 
 .submit-row {
     margin: 5px 0;
-    border: 1px solid #ccc;
+    /*border: 1px solid #ccc;*/
     text-align: right;
 }
 
 .submit-row input {
     margin: 10px;
-    background: #ffc;
+    background: #5663b9;
+    color:#fff;
 }

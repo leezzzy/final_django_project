@@ -32,9 +32,22 @@ div#menu {
 
 div#content {
     position: absolute;
-    top: 70px;
+    top: 220px;
     left: 50px;
-    right: 50px;
+    right: 50px
+}
+
+div#content h1{
+    /*color: #cfceda;*/
+    color: #4648bf;
+}
+
+div#content p{
+    color: #cfceda;
+}
+
+div#content h4{
+    color: #cfceda;
 }
 
 div#footer {
@@ -167,6 +180,8 @@ a:hover {
 /* TABLE */
 table {
     border-collapse: collapse;
+    width:700px;
+    margin: 20px 0px;
 }
 
 td, th {
@@ -177,7 +192,18 @@ td, th {
     font-family: "Lucida Grande", Verdana, Arial, sans-serif;
 }
 
+
 table.change-list, table.change-list th, table.change-list td {
     border: 1px solid #8686f1;
 }
 
+table.change-list th{
+    text-align:center;
+    color: #afc3ff;
+    font-size: 16px;
+}
+
+table.change-list td, table.change-list td a{
+    text-align:center;
+    color: #989ac5;
+}
